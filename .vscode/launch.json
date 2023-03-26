@@ -3,6 +3,24 @@
     "version": "0.1.0",
     "configurations": [
         {
+            "name": "Launch Extension (esbuild)",
+            "type": "extensionHost",
+            "request": "launch",
+            "debugWebWorkerHost": true,
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionDevelopmentKind=web"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "env": {
+                "DEBUGTELEMETRY": "v",
+                "NODE_DEBUG": ""
+            }
+        },
+        {
             "name": "Launch Extension",
             "type": "extensionHost",
             "request": "launch",

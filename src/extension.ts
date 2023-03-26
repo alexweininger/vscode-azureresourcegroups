@@ -65,6 +65,7 @@ export async function activate(context: vscode.ExtensionContext, perfStats: { lo
         activateContext.telemetry.measurements.mainFileLoad = (perfStats.loadEndTime - perfStats.loadStartTime) / 1000;
 
         setupEvents(context);
+        // ext.subscriptionProviderFactory = createWebSubscriptionProviderFactory(context);
         ext.subscriptionProviderFactory = ext.isWeb ? createWebSubscriptionProviderFactory(context) : createAzureAccountSubscriptionProviderFactory();
 
         ext.tagFS = new TagFileSystem(ext.appResourceTree);

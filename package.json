@@ -52,8 +52,8 @@
         "onView:ms-azuretools.helpAndFeedback",
         "onWalkthrough:azure-get-started"
     ],
-    "main": "./main.js",
-    "browser": "./dist/web/extension.bundle.js",
+    "main": "./out.js",
+    "browser": "./out.js",
     "contributes": {
         "x-azResources": {
             "commands": [
@@ -596,13 +596,25 @@
         "@azure/arm-subscriptions": "^5.1.0",
         "@microsoft/vscode-azext-azureutils": "^1.0.0",
         "@microsoft/vscode-azext-utils": "^1.0.0",
+        "assert": "^2.0.0",
+        "browserify-zlib": "^0.2.0",
         "buffer": "^6.0.3",
+        "console-browserify": "^1.2.0",
+        "esbuild": "0.17.13",
+        "esbuild-plugin-polyfill-node": "^0.1.4",
+        "https-browserify": "^1.0.0",
         "jsonc-parser": "^2.2.1",
+        "os-browserify": "^0.3.0",
+        "path-browserify": "^1.0.1",
+        "process": "^0.11.10",
+        "querystring-es3": "^0.2.1",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.2.0",
+        "url": "^0.11.0",
+        "util": "^0.12.5",
         "uuid": "^9.0.0",
         "vscode-nls": "^5.0.1",
         "vscode-uri": "^3.0.7"
     },
-    "extensionDependencies": [
-        "ms-vscode.azure-account"
-    ]
+    "extensionDependencies": []
 }
